@@ -1,10 +1,12 @@
 import base64
 from openai import OpenAI
-
 from lib.camera.camera import makePhoto
 from lib.drive.motor import forward, left, right, stop
 from picamera import PiCamera
 import os
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
 
 camera = PiCamera()
 
